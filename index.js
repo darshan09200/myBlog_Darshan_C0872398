@@ -22,3 +22,8 @@ function openHeader() {
 		x.className = "topnav";
 	}
 }
+
+// document.querySelectorAll('a[href^="#"]').addEventListener("click", function (event) {
+// 	event.preventDefault();
+// 	document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth", top });
+// });
