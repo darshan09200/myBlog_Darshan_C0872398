@@ -1,0 +1,18 @@
+.skyline-graph {
+	text-align: center;
+	display: block;
+}
+
+#ghcard-darshan09200-1 {
+	margin-top: 1rem;
+}
+
+.hide-on-mobile {
+	display: none;
+}
+
+@media screen and (min-width: 767px) {
+	.hide-on-mobile {
+		display: block;
+	}
+}

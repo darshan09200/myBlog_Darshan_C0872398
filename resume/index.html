@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+
+		<link rel="stylesheet" href="/index.css" />
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body onload="activateNavLink()">
+		<div data-include="header"></div>
+
+		<div class="container">
+			<div class="row">
+				<!-- 2 column layout -->
+				<div class="col-12 col-md-8">
+					<object
+						data="./Darshan Jain Resume.pdf"
+						type="application/pdf"
+						width="100%"
+						style="height: calc(100vh - 70px)"
+						class="hide-on-mobile"
+					>
+						<p>
+							Your browser does not support PDF files.
+							<a href="./Darshan Jain Resume.pdf">Download the file instead</a>
+						</p>
+					</object>
+					<a
+						href="./Darshan Jain Resume.pdf"
+						class="btn"
+						style="padding: 1rem; border: 1px solid black; display: block; margin: 0.5rem"
+					>
+						Download the resume instead
+					</a>
+				</div>
+				<div class="col-12 col-md-4">
+					<a href="https://skyline.github.com/darshan09200/2022" target="_blank" class="btn skyline-graph">
+						<img src="/media/images/github-skyline.png" width="100%" />
+						View my 3D Contribution Graph
+					</a>
+					<div class="github-card" data-github="darshan09200" data-width="100%" data-theme="default"></div>
+					<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<!-- image rollover -->
+					<img
+						src="http://ghchart.rshah.org/darshan09200"
+						onmouseover="this.src='/media/images/github-graph.png'"
+						onmouseleave="this.src='http://ghchart.rshah.org/darshan09200'"
+						alt="Darshan's Github chart"
+						width="100%"
+					/>
+				</div>
+			</div>
+		</div>
+		<div data-include="footer"></div>
+		<script src="/index.js"></script>
+	</body>
+</html>

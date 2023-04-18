@@ -23,7 +23,8 @@ body {
 }
 
 #experience,
-#projects {
+#projects,
+#contact {
 	scroll-margin-top: 75px;
 }
 
@@ -270,6 +271,7 @@ body {
 	left: 0;
 	z-index: 1030;
 	background-color: rgba(255, 255, 255, 1);
+	transition: 5s all;
 }
 
 .topnav .container {
@@ -292,8 +294,7 @@ footer .name small {
 	}
 }
 
-.topnav a,
-footer a {
+.topnav a {
 	float: left;
 	text-align: center;
 	padding: 14px 16px;
@@ -301,8 +302,7 @@ footer a {
 	color: #1a1a1a;
 }
 
-.topnav a:hover,
-footer a:hover {
+.topnav a:hover {
 	color: #4cc3dc;
 }
 
@@ -314,7 +314,7 @@ footer a:hover {
 	display: none;
 }
 
-.topnav.open .icon {
+.topnav.open .menu {
 	position: absolute;
 	right: 1rem;
 	top: 0;
@@ -328,7 +328,7 @@ footer a:hover {
 	}
 }
 
-.topnav a.icon {
+.topnav .menu {
 	float: right;
 	display: block;
 }
@@ -339,7 +339,7 @@ footer a:hover {
 		float: right;
 	}
 
-	.topnav a.icon {
+	.topnav .menu {
 		display: none !important;
 	}
 }
@@ -372,6 +372,7 @@ footer a:hover {
 }
 .description {
 	font-size: 1.125rem;
+	margin-bottom: 4rem;
 }
 
 .btn {
@@ -383,11 +384,12 @@ footer a:hover {
 	padding: 0.375rem 0.75rem;
 	border: none;
 	cursor: pointer;
+	color: #1a1a1a;
 }
 
 .btn.say-hi {
 	padding-left: 0;
-	margin-top: 4rem;
+
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 }
@@ -531,6 +533,88 @@ div[data-include="footer"] {
 	padding-bottom: 4rem;
 }
 
+footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+
 footer a {
 	float: none;
+}
+
+footer div a {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+footer a {
+	text-align: center;
+	text-decoration: none;
+	color: #1a1a1a;
+}
+
+.contact-option-section {
+	display: flex;
+	align-items: center;
+}
+
+.contact-option {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(198, 198, 198, 1);
+	margin-right: 1rem;
+}
+
+.contact-option svg {
+	margin-right: 0.5rem;
+}
+
+.topnav a:last-child {
+	padding: 0;
+}
+
+.menu {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	padding: 0;
+	float: right;
+}
+.line {
+	fill: none;
+	stroke: black;
+	stroke-width: 6;
+	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+	stroke-dasharray: 60 207;
+	stroke-width: 6;
+}
+.line2 {
+	stroke-dasharray: 60 60;
+	stroke-width: 6;
+}
+.line3 {
+	stroke-dasharray: 60 207;
+	stroke-width: 6;
+}
+.opened .line1 {
+	stroke-dasharray: 90 207;
+	stroke-dashoffset: -134;
+	stroke-width: 6;
+}
+.opened .line2 {
+	stroke-dasharray: 1 60;
+	stroke-dashoffset: -30;
+	stroke-width: 6;
+}
+.opened .line3 {
+	stroke-dasharray: 90 207;
+	stroke-dashoffset: -134;
+	stroke-width: 6;
 }

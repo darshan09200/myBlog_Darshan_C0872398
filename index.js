@@ -1,3 +1,23 @@
+const activateNavLink = () => {
+	const refreshLink = () => {
+		const { hash, pathname } = window.location;
+		document.querySelectorAll(`#topnav > div > a`).forEach((el)=>el.classList.remove("active"));
+		if (pathname === "/") {
+			document.querySelector(`#topnav > div > a[href="/#${hash.replace("#", "")}"]`)?.classList.add("active");
+		} else {
+			const newPathName = pathname.split("/");
+			newPathName.pop();
+			document.querySelector(`#topnav > div > a[href="${newPathName.join("/")}"]`)?.classList.add("active");
+		}
+	};
+
+	refreshLink();
+
+	window.addEventListener("hashchange", function () {
+		refreshLink();
+	});
+};
+
 function loadImports() {
 	var includes = document.querySelectorAll("[data-include]");
 	includes.forEach((el) => {
@@ -13,8 +33,7 @@ function loadImports() {
 
 loadImports();
 
-
-function openHeader() {
+function toggleHeader() {
 	var x = document.getElementById("topnav");
 	if (x.className === "topnav") {
 		x.className += " open";
@@ -22,8 +41,3 @@ function openHeader() {
 		x.className = "topnav";
 	}
 }
-
-// document.querySelectorAll('a[href^="#"]').addEventListener("click", function (event) {
-// 	event.preventDefault();
-// 	document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth", top });
-// });

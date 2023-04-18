@@ -8,7 +8,8 @@
 
 		<link rel="stylesheet" href="./index.css" />
 	</head>
-	<body>
+	<body onload="activateNavLink()">
+		<!-- navbar -->
 		<div data-include="header"></div>
 
 		<div class="container">
@@ -16,13 +17,13 @@
 				<div class="col-12 banner">
 					<p>Hey, I'm</p>
 					<h2 class="name"><span>Darshan Jain</span></h2>
-					<p name="description">
+					<p class="description">
 						I'm a mobile application developer based in Toronto, Canada, and a mobile applications student.
 						I enjoy creating things that live on the internet, whether websites, applications, or anything
 						in between. I have professional experience of more than two years in mobile applications
 						development, one year in web development and near to one year in backend development.
 					</p>
-					<button type="button" class="btn say-hi">
+					<a class="btn say-hi" href="#contact">
 						Say Hi
 						<svg width="34" height="6" viewBox="0 0 34 6" fill="#000" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -30,7 +31,7 @@
 								fill="#000"
 							/>
 						</svg>
-					</button>
+					</a>
 				</div>
 			</div>
 			<div class="row">
@@ -171,6 +172,69 @@
 							</td>
 						</tr>
 					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 divider"></div>
+			</div>
+			<div class="row" id="contact">
+				<div class="col-12 section">
+					<h4 class="section-heading">Contact</h4>
+					<div class="contact-option-section">
+						<a class="btn contact-option" href="mailto:djainj86@gmail.com">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_276_687)">
+									<path
+										d="M4 3H22C22.2652 3 22.5196 3.10536 22.7071 3.29289C22.8946 3.48043 23 3.73478 23 4V20C23 20.2652 22.8946 20.5196 22.7071 20.7071C22.5196 20.8946 22.2652 21 22 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3ZM13.06 11.683L6.648 6.238L5.353 7.762L13.073 14.317L20.654 7.757L19.346 6.244L13.061 11.683H13.06Z"
+										fill="#1A1A1A"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_276_687">
+										<rect width="24" height="24" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+							Send an email
+						</a>
+						<a class="btn contact-option" href="tel:16478703956">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								version="1.1"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								xmlns:svgjs="http://svgjs.com/svgjs"
+								width="24"
+								height="24"
+								x="0"
+								y="0"
+								viewBox="0 0 32 32"
+								xml:space="preserve"
+								class=""
+							>
+								<g>
+									<path
+										d="M29.393 23.36c-.874-.733-6-3.979-6.852-3.83-.4.071-.706.412-1.525 1.389a11.687 11.687 0 0 1-1.244 1.347 10.757 10.757 0 0 1-2.374-.88 14.7 14.7 0 0 1-6.784-6.786 10.757 10.757 0 0 1-.88-2.374 11.687 11.687 0 0 1 1.347-1.244c.976-.819 1.318-1.123 1.389-1.525.149-.854-3.1-5.978-3.83-6.852C8.334 2.243 8.056 2 7.7 2 6.668 2 2 7.772 2 8.52c0 .061.1 6.07 7.689 13.791C17.41 29.9 23.419 30 23.48 30c.748 0 6.52-4.668 6.52-5.7 0-.356-.243-.634-.607-.94zM23 15h2a8.009 8.009 0 0 0-8-8v2a6.006 6.006 0 0 1 6 6z"
+										fill="#000000"
+										data-original="#000000"
+										class=""
+									></path>
+									<path
+										d="M28 15h2A13.015 13.015 0 0 0 17 2v2a11.013 11.013 0 0 1 11 11z"
+										fill="#000000"
+										data-original="#000000"
+										class=""
+									></path>
+								</g>
+							</svg>
+							Phone
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="row" style="margin-bottom: 1rem">
